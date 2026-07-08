@@ -2,8 +2,15 @@
   <div class="app-layout">
     <aside class="sidebar">
       <div class="sidebar-header">
-        <span class="sidebar-logo">✈️</span>
-        <div class="sidebar-title">AI 旅游助手</div>
+        <span class="sidebar-logo">
+          <svg viewBox="0 0 64 64" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="60" height="60" rx="14" fill="#DBEAFE" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <path d="M32 8 L44 36 L32 31 L20 36Z" fill="white" opacity="0.92"/>
+            <rect x="30" y="14" width="4" height="18" rx="2" fill="rgba(0,0,0,0.35)"/>
+            <circle cx="32" cy="46" r="4" fill="#FBBF24"/>
+          </svg>
+        </span>
+        <div class="sidebar-title">游伴AI</div>
       </div>
       <nav class="sidebar-nav">
         <button
@@ -37,10 +44,11 @@ const auth = useAuthStore()
 const router = useRouter()
 
 const navItems = [
-  { path: '/chat', icon: '💬', label: 'AI 对话' },
-  { path: '/history', icon: '📋', label: '历史记录' },
-  { path: '/plans', icon: '🗺️', label: '我的行程' },
-  { path: '/profile', icon: '👤', label: '个人中心' }
+  { path: '/app/chat', icon: '💬', label: 'AI 规划' },
+  { path: '/app/explore', icon: '🗺️', label: '目的地探索' },
+  { path: '/app/inspiration', icon: '✨', label: '旅行灵感' },
+  { path: '/app/plans', icon: '📋', label: '我的行程' },
+  { path: '/app/profile', icon: '👤', label: '个人中心' }
 ]
 
 function handleLogout() {

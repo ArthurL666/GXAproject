@@ -3,7 +3,7 @@
     <div class="page-header" style="display:flex;align-items:center;justify-content:space-between;">
       <div>
         <h2>📋 历史对话记录</h2>
-        <p>查看您与AI旅游助手的对话历史</p>
+        <p>查看您与游伴AI的对话历史</p>
       </div>
       <button v-if="messages.length" class="btn btn-outline btn-sm" @click="clearAll">🗑️ 清空记录</button>
     </div>
@@ -18,7 +18,7 @@
 
     <div v-else class="history-list">
       <div v-for="msg in messages" :key="msg.id" class="history-card">
-        <span class="role-badge" :class="msg.role">{{ msg.role === 'user' ? '👤 我' : '🤖 AI' }}</span>
+        <span class="role-badge" :class="msg.role"><span v-if="msg.role === 'assistant'"><AiIcon :size="14" variant="primary" /> AI</span><span v-else>👤 我</span></span>
         <div class="history-text">{{ truncate(msg.content, 200) }}</div>
         <div style="display:flex;align-items:center;gap:12px;">
           <span class="history-time">{{ fmtTime(msg.createTime) }}</span>
@@ -33,6 +33,7 @@
 import { ref, onMounted } from 'vue'
 import api from '../api'
 import { useToast } from '../composables/useToast'
+import AiIcon from '../components/AiIcon.vue'
 
 const messages = ref([])
 const loading = ref(true)

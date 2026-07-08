@@ -1,0 +1,7 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- 深色玻璃质感 → 贴合登录页背景 -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <path d="M32 8 L44 36 L32 31 L20 36Z" fill="white" opacity="0.92"/>
+  <rect x="30" y="14" width="4" height="18" rx="2" fill="rgba(0,0,0,0.35)"/>
+  <circle cx="32" cy="46" r="4" fill="#FBBF24"/>
+</svg>
