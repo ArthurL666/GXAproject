@@ -1,5 +1,12 @@
 package com.study.travel.service;
 
+import com.study.travel.entity.User;
+import com.study.travel.repository.UserRepository;
+import com.study.travel.security.JwtUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
 @Service
 public class UserService {
 
@@ -54,5 +61,3 @@ public class UserService {
         }
         return userRepository.save(user);
     }
-
-}
