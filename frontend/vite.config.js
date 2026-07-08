@@ -9,7 +9,7 @@ export default defineConfig({
     allowedHosts: ['trave123-web.cpolar.cn'],
     proxy: {
       '/api': {
-        target: 'https://trave123.cpolar.cn',
+        target: 'http://localhost:8081',
         changeOrigin: true
       },
       '/proxy-img': {
