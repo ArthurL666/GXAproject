@@ -1,9 +1,5 @@
 package com.study.travel.service;
 
-import com.study.travel.dto.AuthResponse;
-import com.study.travel.dto.LoginRequest;
-import com.study.travel.dto.ProfileUpdateRequest;
-import com.study.travel.dto.RegisterRequest;
 import com.study.travel.entity.User;
 import com.study.travel.repository.UserRepository;
 import com.study.travel.security.JwtUtil;
@@ -65,5 +61,3 @@ public class UserService {
         }
         return userRepository.save(user);
     }
-
-}
