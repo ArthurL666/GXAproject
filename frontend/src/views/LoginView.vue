@@ -145,7 +145,7 @@ async function submit() {
       error.value = result.message
     }
   } catch (e) {
-    error.value = e.response?.data?.message || '网络错误，请稍后重试'
+    error.value = e.response?.data?.message || e.response?.data?.detail || '网络错误，请稍后重试'
   } finally {
     loading.value = false
   }
